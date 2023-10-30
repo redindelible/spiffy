@@ -505,7 +505,11 @@ impl AssembleFunction {
 
 
 fn main() {
-    let file = Parser::parse("fn main() { return 0; }");
+    let file = Parser::parse(r"
+        fn main() {
+            return 0;
+        }
+    ");
 
     print!("{}", Assembler::assemble(&file));
 }
